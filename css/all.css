@@ -470,3 +470,141 @@ a:hover {
     width: 100%;
   }
 }
+
+.block-absolute-top, .block-absolute-bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.block-absolute-top > .block-inner, .block-absolute-bottom > .block-inner {
+  display: block;
+}
+
+.block {
+  padding: 20px 0;
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.block-fill-height {
+  height: 100.1vh;
+}
+
+.block-collapse {
+  padding: 0;
+}
+
+.block-inverse {
+  color: #fff;
+}
+
+.block-inverse h1, .block-inverse h2, .block-inverse h3, .block-inverse h4, .block-inverse h5, .block-inverse h6,
+.block-inverse .h1, .block-inverse .h2, .block-inverse .h3, .block-inverse .h4, .block-inverse .h5, .block-inverse .h6 {
+  color: inherit;
+}
+
+.block-absolute-top {
+  top: 0;
+}
+
+.block-absolute-bottom {
+  bottom: 0;
+}
+
+.block-overlay {
+  position: relative;
+  z-index: 1;
+}
+
+.block-overlay:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: inherit;
+  opacity: 0.8;
+}
+
+.block-overlay-opacity-lg:after {
+  opacity: 0.9;
+}
+
+.block-overlay-opacity-sm:after {
+  opacity: 0.4;
+}
+
+.block-overlay-opacity-xs:after {
+  opacity: 0.2;
+}
+
+.block-relative {
+  position: relative;
+  z-index: 2;
+}
+
+.block-header {
+  display: table-header-group;
+  height: 1%;
+}
+
+.block-header .block-inner {
+  vertical-align: top;
+}
+
+.block-content {
+  display: table-row;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .block-content {
+    height: 100%;
+  }
+}
+
+.block-footer {
+  display: table-footer-group;
+  height: 1%;
+}
+
+.block-footer .block-inner {
+  vertical-align: bottom;
+}
+
+.block-inner {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.block-inner:before {
+  content: '';
+  float: left;
+}
+
+.block-title {
+  font-size: 36px;
+}
+
+.block-description {
+  font-size: 24px;
+}
+
+.block-xs {
+  padding: 5px 0;
+}
+
+.block-sm {
+  padding: 15px 0;
+}
+
+.block-lg {
+  padding: 30px 0;
+}
